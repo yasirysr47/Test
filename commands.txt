@@ -1,0 +1,243 @@
+Yasir@Yasir-Mohammed MINGW64 ~/Documents
+$ cd Git
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git
+$ git config --global user.name "yasirysr7"
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git
+$ git config --global user.email "yasir123119@gmail.com"
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git
+$ git init
+Initialized empty Git repository in C:/Users/Yasir/Documents/Git/.git/
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git (master)
+$ git add test.txt
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   test.txt
+
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git (master)
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git (master)
+$ git commit -m "First commit"
+[master (root-commit) 76d16d0] First commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git (master)
+$ git remote add variable https://github.com/yasirysr47/Test.git
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git (master)
+$ git push variable master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com/':
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git (master)
+$ bash: line 0: read: read error: 0: Input/output error
+git pull variable master
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/yasirysr47/Test
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> variable/master
+fatal: refusing to merge unrelated histories
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git (master)
+$ git pull --allow -unrelated-histories variable master
+error: unknown switch `u'
+usage: git pull [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+
+Options related to merging
+    -r, --rebase[=<false|true|preserve|interactive>]
+                          incorporate changes by rebasing rather than merging
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    --edit                edit message before committing
+    --ff                  allow fast-forward
+    --ff-only             abort if fast-forward is not possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    --autostash           automatically stash/stash pop before and after rebase
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+
+Options related to fetching
+    --all                 fetch from all remotes
+    -a, --append          append to .git/FETCH_HEAD instead of overwriting
+    --upload-pack <path>  path to upload pack on remote end
+    -f, --force           force overwrite of local branch
+    -t, --tags            fetch all tags and associated objects
+    -p, --prune           prune remote-tracking branches no longer on remote
+    --recurse-submodules[=<on-demand>]
+                          control recursive fetching of submodules
+    -j, --jobs[=<n>]      number of submodules pulled in parallel
+    --dry-run             dry run
+    -k, --keep            keep downloaded pack
+    --depth <depth>       deepen history of shallow clone
+    --unshallow           convert to a complete repository
+    --update-shallow      accept refs that update .git/shallow
+    --refmap <refmap>     specify fetch refmap
+
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git (master)
+$ git pull --allow -unrelated -histories variable master
+error: unknown switch `u'
+usage: git pull [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+
+Options related to merging
+    -r, --rebase[=<false|true|preserve|interactive>]
+                          incorporate changes by rebasing rather than merging
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    --edit                edit message before committing
+    --ff                  allow fast-forward
+    --ff-only             abort if fast-forward is not possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    --autostash           automatically stash/stash pop before and after rebase
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+
+Options related to fetching
+    --all                 fetch from all remotes
+    -a, --append          append to .git/FETCH_HEAD instead of overwriting
+    --upload-pack <path>  path to upload pack on remote end
+    -f, --force           force overwrite of local branch
+    -t, --tags            fetch all tags and associated objects
+    -p, --prune           prune remote-tracking branches no longer on remote
+    --recurse-submodules[=<on-demand>]
+                          control recursive fetching of submodules
+    -j, --jobs[=<n>]      number of submodules pulled in parallel
+    --dry-run             dry run
+    -k, --keep            keep downloaded pack
+    --depth <depth>       deepen history of shallow clone
+    --unshallow           convert to a complete repository
+    --update-shallow      accept refs that update .git/shallow
+    --refmap <refmap>     specify fetch refmap
+
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git (master)
+$ git pull variable master
+From https://github.com/yasirysr47/Test
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git (master)
+$ git pull --allow -unrelated -histories variable master
+error: unknown switch `u'
+usage: git pull [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+
+Options related to merging
+    -r, --rebase[=<false|true|preserve|interactive>]
+                          incorporate changes by rebasing rather than merging
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    --edit                edit message before committing
+    --ff                  allow fast-forward
+    --ff-only             abort if fast-forward is not possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    --autostash           automatically stash/stash pop before and after rebase
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+
+Options related to fetching
+    --all                 fetch from all remotes
+    -a, --append          append to .git/FETCH_HEAD instead of overwriting
+    --upload-pack <path>  path to upload pack on remote end
+    -f, --force           force overwrite of local branch
+    -t, --tags            fetch all tags and associated objects
+    -p, --prune           prune remote-tracking branches no longer on remote
+    --recurse-submodules[=<on-demand>]
+                          control recursive fetching of submodules
+    -j, --jobs[=<n>]      number of submodules pulled in parallel
+    --dry-run             dry run
+    -k, --keep            keep downloaded pack
+    --depth <depth>       deepen history of shallow clone
+    --unshallow           convert to a complete repository
+    --update-shallow      accept refs that update .git/shallow
+    --refmap <refmap>     specify fetch refmap
+
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git (master)
+$ git push variable master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com/': yasirysr47
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/yasirysr47/Test.git/'
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git (master)
+$ git push variable master
+To https://github.com/yasirysr47/Test.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/yasirysr47/Test.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git (master)
+$ git pull --allow-unrelated-histories variable master
+From https://github.com/yasirysr47/Test
+ * branch            master     -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+Yasir@Yasir-Mohammed MINGW64 ~/Documents/Git (master)
+$ git push variable master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 542 bytes | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/yasirysr47/Test.git
+   6281732..0d50658  master -> master
